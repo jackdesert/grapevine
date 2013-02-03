@@ -9,7 +9,7 @@ class Grapevine.Routers.Rumors extends Backbone.Router
 
   index: ->
     view = new Grapevine.Views.RumorsIndex(collection: @rumors_collection)
-    $('#rumor_headings').html(view.render().el)
+    $('#rumor_headlines').html(view.render().el)
 
   show: (id) ->
     alert "Rumor #{id} Reached"

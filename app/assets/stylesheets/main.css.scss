@@ -1,16 +1,33 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
 #content{
   width: 600px;
   margin: 0 auto;
+  position: relative;
+  height: 600px;
+  background-color: $nearly_white_background;
 }
-#rumor_headings{
+#rumor_headlines{
   width: 295px;
   display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50px;
 }
 
 #rumor_details{
+  top:50px; 
   width: 295px;
   display: inline-block;
+  font-size: 19px;
+  padding: 12px;
+  width: 270px;
+  position: absolute;
+  right: 0;
+  background-color: $medium_background;
+  min-height: 300px;
 }

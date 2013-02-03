@@ -1,4 +1,3 @@
-Rumor Details
-<%= @rumor.get('body') %>
-<%= @rumor.get('heading') %>
-<%= @rumor.get('author') %>
+<div class='detail_headline'><%= @rumor.get('headline') %></div>
+<div class='detail_body'><%= @rumor.get('body') %></div>
+<div class='detail_author'>--<%= @rumor.get('author') %></div>

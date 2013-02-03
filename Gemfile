@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'haml-rails'
 gem 'backbone-on-rails'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,7 +23,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+  gem 'pry-debugger'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.0"
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

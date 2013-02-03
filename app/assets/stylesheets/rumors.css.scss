@@ -2,7 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'colors';
+
 li{
-  background-color: #ccf;
+  color: $dark_text;
+  font-size: 25px;
+  background-color: $light_background;
   list-style: none;
+  &.already_read{
+    color: $medium_text;
+  }
+  cursor: default;
+  border: 1px solid grey;
+  border-radius: 2px;
+  margin: 2px 0;
+  &:hover{
+    background-color: $dark_background !important;
+  }
+  &.current_rumor{
+    background-color: $medium_background;
+  }
+}
+#title{
+  font-size: 35px;
+  color: purple;
+  text-align: center;
+}
+
+.detail_headline, .detail_body, .detail_author{
+  color: $dark_text;
+}
+.detail_headline{
+  font-size: 27px;
+  padding: $med_pad;
+  text-align: center;
+}
+.detail_body{
+  font-size: 20px;
+  padding: $med_pad;
+}
+.detail_author{
+  font-size: 18px;
+  font-style: italic;
+  padding: $med_pad;
 }

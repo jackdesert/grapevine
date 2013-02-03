@@ -16,10 +16,11 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
   displayRumor: (event) ->
     id = event.currentTarget.id
     rumor = @collection.get(id)
+    rumor.ensureMarkedAsRead()
     view = new Grapevine.Views.Rumor(model: rumor)
     $('#rumor_details').html(view.render().el)
     console.log('here')
 
   appendRumor: (rumor) ->
-    view = new Grapevine.Views.RumorHeading(model: rumor)
+    view = new Grapevine.Views.RumorHeadline(model: rumor)
     $('#rumors').append(view.render().el)

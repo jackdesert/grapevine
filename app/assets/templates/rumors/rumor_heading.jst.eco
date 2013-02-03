@@ -1,4 +1,0 @@
-Rumor Heading
-<li id=<%= @rumor.id %>>
-  <%= @rumor.get('headline') %>
-</li>
