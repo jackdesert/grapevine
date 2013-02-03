@@ -1,2 +1,4 @@
-Single Rumor
+Rumor Details
 <%= @rumor.get('body') %>
+<%= @rumor.get('heading') %>
+<%= @rumor.get('author') %>
