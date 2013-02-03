@@ -1,0 +1,2 @@
+Single Rumor
+<%= @rumor.get('body') %>
