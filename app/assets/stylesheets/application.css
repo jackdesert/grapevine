@@ -20,6 +20,7 @@
 /* MIXIN DEFINITIONS NEXT (so we can use them later) */
 
 /* CUSTOM STYLESHEETS LAST */
+@import "./standard.css.scss";
 @import "./main.css.scss";
 @import "./rumors.css.scss";
 

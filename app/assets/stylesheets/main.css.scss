@@ -4,11 +4,14 @@
 
 @import 'colors';
 
+body{
+  background-color: $nearly_black_background;
+}
 #content{
   width: 600px;
   margin: 0 auto;
   position: relative;
-  height: 600px;
+  height: 600px; // Resets dynamically later
   background-color: $nearly_white_background;
 }
 #rumor_headlines{

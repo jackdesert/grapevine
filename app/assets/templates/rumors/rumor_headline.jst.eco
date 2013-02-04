@@ -1,3 +1,4 @@
-<li id='<%= @rumor.id %>' <%= "class='already_read'" if @rumor.get('already_read') %>>
+<% id = @rumor.id || @rumor.defaultId %>
+<li id='<%= id %>' <%= "class='already_read'" if @rumor.get('already_read') %>>
   <%= @rumor.get('headline') %>
 </li>

@@ -1,0 +1,18 @@
+<form id="new_rumor_form">
+  <input type='text' id='new_rumor_headline'>
+  <label for='new_rumor_headline'>Title</label>
+  <div class='clear'/>
+
+  <textarea id='new_rumor_body'></textarea>
+  <label for='new_rumor_body'>Message</label>
+  <div class='clear'/>
+
+  <input type='text' id='new_rumor_author'>
+  <label for='new_rumor_author'>Your Name</label>
+  <div class='clear'/>
+  <div id='button_holder'>
+    <input type='submit' id='new_rumor_cancel' value='Cancel'>
+    <input type='submit' id='new_rumor_submit' value='Create'>
+  </div>
+  <div class='clear'/>
+</form>

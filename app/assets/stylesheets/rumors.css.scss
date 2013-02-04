@@ -46,3 +46,33 @@ li{
   font-style: italic;
   padding: $med_pad;
 }
+
+
+#create_new_rumor{
+  position: absolute;
+  top: -16px;
+  right: -249px;
+  display: inline-block;
+  &:hover{
+    background-color: $medium_background;
+  }
+}
+form{
+  label{
+    font-size: 12px;
+    float: right;
+  }
+  textarea{
+    height: 40px;
+  }
+  textarea, input[type='text']{
+    width: 180px;
+    float: right;
+  }
+}
+form#new_rumor_form{
+  #button_holder{
+    padding: $med_pad;
+    float: right;
+  }
+}

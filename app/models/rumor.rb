@@ -21,7 +21,7 @@ class Rumor < ActiveRecord::Base
   def self.all_with_already_read_attribute_set(list_of_ids)
     list_of_ids.map!{|id| id.to_i}
     all_rumors = []
-    self.find_each do |rumor|
+    self.all.each do |rumor|
       rumor.mark_as_read if list_of_ids.include? rumor.id
       all_rumors << rumor
     end
