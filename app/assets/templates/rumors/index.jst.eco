@@ -1,2 +1,2 @@
-<div id='create_new_rumor'>Create New</div>
+<input type='submit' id='new_rumor_button' value='New'>
 <div id='rumors'></div>

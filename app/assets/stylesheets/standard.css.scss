@@ -1,8 +1,19 @@
-@import 'colors';
+@import 'sassvars';
 
 .clear{
   clear: both;
 }
 *{
   color: $dark_text;
+  border-radius: 5px;
+  background-color: $nearly_white_background;
+}
+
+input{
+  z-index: 1;
+}
+input[type='submit']{
+  background-color: $medium_background;
+  border: 1px solid $dark_background;
+  box-shadow: 3px 2px 2px;
 }

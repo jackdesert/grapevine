@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'colors';
+@import 'sassvars';
 
 body{
   background-color: $nearly_black_background;
@@ -19,18 +19,34 @@ body{
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 50px;
+  top: $column_top;
 }
 
 #rumor_details{
-  top:50px; 
+  top: $column_top; 
   width: 295px;
   display: inline-block;
   font-size: 19px;
   padding: 12px;
+  padding-top: 22px;
   width: 270px;
   position: absolute;
   right: 0;
   background-color: $medium_background;
   min-height: 300px;
 }
+
+#title{
+  padding: 17px;
+  text-align: center;
+  font-size: 25px;
+  color: $dark_text;
+  .luxuriant{
+    font-size: 35px;
+    color: purple;
+    font-style: italic;
+  }
+
+}
+
+

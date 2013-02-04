@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'colors';
+@import 'sassvars';
 
 li{
   color: $dark_text;
+  padding: 2px;
   font-size: 25px;
   background-color: $light_background;
   list-style: none;
@@ -14,7 +15,6 @@ li{
   }
   cursor: default;
   border: 1px solid grey;
-  border-radius: 2px;
   margin: 2px 0;
   &:hover{
     background-color: $dark_background !important;
@@ -23,12 +23,13 @@ li{
     background-color: $medium_background;
   }
 }
-#title{
-  font-size: 35px;
-  color: purple;
-  text-align: center;
-}
 
+///////////////////  Rumor Detail /////////////////////
+#edit_rumor_button{
+  position: absolute;
+  bottom: -23px;
+  right: 3px;
+}
 .detail_headline, .detail_body, .detail_author{
   color: $dark_text;
 }
@@ -48,10 +49,10 @@ li{
 }
 
 
-#create_new_rumor{
+#new_rumor_button{
   position: absolute;
-  top: -16px;
-  right: -249px;
+  top: -22px;
+  right: -303px;
   display: inline-block;
   &:hover{
     background-color: $medium_background;
@@ -61,18 +62,26 @@ form{
   label{
     font-size: 12px;
     float: right;
+    padding-top: 5px;
+    padding-right: 2px;
   }
   textarea{
-    height: 40px;
+    height: 21ex;
   }
   textarea, input[type='text']{
     width: 180px;
     float: right;
+    margin-bottom: $small_pad;
   }
 }
-form#new_rumor_form{
+form#new_rumor_form, form#edit_rumor_form{
   #button_holder{
-    padding: $med_pad;
+    padding: $med_pad 0;
     float: right;
   }
+}
+
+/////// Submit Buttons //////////
+#new_rumor_submit, #rumor_update, #new_rumor_cancel{
+  float: right;
 }

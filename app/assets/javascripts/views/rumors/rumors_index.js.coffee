@@ -5,8 +5,8 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
   tagName: 'None'
 
   events:
-    "click li" : "displayRumor"
-    "click #create_new_rumor" : "buildRumor"
+    "click li"                : "displayRumor"
+    "click #new_rumor_button" : "buildRumor"
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -20,7 +20,7 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
     this
 
   displayRumor: (event) ->
-    # Similar to Grapevine.Views.RumorNew#displayNewlyCreatedRumor
+    # Similar to Grapevine.Views.RumorForm#displayNewlyCreatedRumor
     id = event.currentTarget.id
     rumor = @collection.get(id)
     rumor.ensureMarkedAsRead()
@@ -46,5 +46,7 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
     $('#content').height(height)
 
   buildRumor: (event) ->
-    view = new Grapevine.Views.RumorNew(collection: @collection)
+    view = new Grapevine.Views.RumorForm(collection: @collection, new_item: true)
     $('#rumor_details').html(view.render().el)
+    $('#new_rumor_headline').focus()
+

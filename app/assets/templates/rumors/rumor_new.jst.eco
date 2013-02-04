@@ -1,18 +1,24 @@
-<form id="new_rumor_form">
-  <input type='text' id='new_rumor_headline'>
+<% form_id      = if @new_item then "new_rumor_form"       else "edit_rumor_form" %>
+<% submit_value = if @new_item then "Create"               else "Save" %>
+<% submit_id    = if @new_item then "new_rumor_submit"     else "rumor_update" %>
+<% headline     = if @rumor    then @rumor.get('headline') else '' %>
+<% body         = if @rumor    then @rumor.get('body')     else '' %>
+<% author       = if @rumor    then @rumor.get('headline') else '' %>
+<form id="<%= form_id %>">
+  <input type='text' id='new_rumor_headline' value='<%= headline %>'>
   <label for='new_rumor_headline'>Title</label>
   <div class='clear'/>
 
-  <textarea id='new_rumor_body'></textarea>
+  <textarea id='new_rumor_body'><%= body %></textarea>
   <label for='new_rumor_body'>Message</label>
   <div class='clear'/>
 
-  <input type='text' id='new_rumor_author'>
+  <input type='text' id='new_rumor_author' value='<%= author %>'>
   <label for='new_rumor_author'>Your Name</label>
   <div class='clear'/>
   <div id='button_holder'>
+    <input type='submit' id='<%= submit_id %>' value='<%= submit_value %>'>
     <input type='submit' id='new_rumor_cancel' value='Cancel'>
-    <input type='submit' id='new_rumor_submit' value='Create'>
   </div>
   <div class='clear'/>
 </form>

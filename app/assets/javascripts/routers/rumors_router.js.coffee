@@ -5,6 +5,7 @@ class Grapevine.Routers.Rumors extends Backbone.Router
 
   initialize: ->
     @rumors_collection = new Grapevine.Collections.Rumors()
+    @rumors_collection.comparator = false # no sorting for us, that way they stay in reverse chronological order
     @rumors_collection.fetch()
 
   index: ->

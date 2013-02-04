@@ -1,3 +1,12 @@
 <div class='detail_headline'><%= @rumor.get('headline') %></div>
-<div class='detail_body'><%= @rumor.get('body') %></div>
+<div class='detail_body'>
+  <% for bite in @rumor.get('body').split('\n'): %>
+    <%= do (bite) -> %>
+      <%= bite %>
+      <br>
+    <% end %>
+  <% end %>
+</div>
 <div class='detail_author'>--<%= @rumor.get('author') %></div>
+
+<input type='submit' id='edit_rumor_button' value='Edit'>
