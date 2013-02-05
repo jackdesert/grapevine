@@ -9,11 +9,18 @@
   background-color: $nearly_white_background;
 }
 
+input[type='text'], textarea{
+  outline: none;
+  border: 2px solid $dark_background;
+  padding: 3px;
+  font-size: 14px;
+}
 input{
   z-index: 1;
 }
 input[type='submit']{
   background-color: $medium_background;
   border: 1px solid $dark_background;
-  box-shadow: 3px 2px 2px;
+  box-shadow: 3px 2px 2px $nearly_black_background;
+    -webkit-box-shadow: 3px 2px 2px $nearly_black_background;
 }

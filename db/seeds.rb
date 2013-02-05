@@ -50,7 +50,7 @@ Rumor.create(author: author,
 
 Rumor.create(author: author,
   headline: "Try it II",
-  body: "Notice that your new message popped onto the top of the list. New content always floats to the top.")
+  body: "Notice that your new message popped onto the top of the list. (New content always floats to the top.) Also note that it highlighted to show that it's the one you're currently viewing.")
 
 Rumor.create(author: author,
   headline: "Try it",

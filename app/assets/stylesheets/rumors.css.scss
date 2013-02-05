@@ -6,7 +6,7 @@
 
 li{
   color: $dark_text;
-  padding: 2px;
+  padding: 2px 4px;
   font-size: 25px;
   background-color: $light_background;
   list-style: none;
@@ -27,7 +27,7 @@ li{
 ///////////////////  Rumor Detail /////////////////////
 #edit_rumor_button{
   position: absolute;
-  bottom: -23px;
+  bottom: -21px;
   right: 3px;
 }
 .detail_headline, .detail_body, .detail_author{
@@ -52,7 +52,7 @@ li{
 #new_rumor_button{
   position: absolute;
   top: -22px;
-  right: -303px;
+  right: -297px;
   display: inline-block;
   &:hover{
     background-color: $medium_background;

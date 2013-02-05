@@ -18,7 +18,7 @@ body{
   width: 295px;
   display: inline-block;
   position: absolute;
-  left: 0;
+  left: 3px;
   top: $column_top;
 }
 
@@ -29,9 +29,9 @@ body{
   font-size: 19px;
   padding: 12px;
   padding-top: 22px;
-  width: 270px;
+  width: 267px;
   position: absolute;
-  right: 0;
+  right: 3px;
   background-color: $medium_background;
   min-height: 300px;
 }
