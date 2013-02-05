@@ -35,8 +35,8 @@ Cool Features
 -------------
 
 * The Grapevine is built as a single page application (SPA). Which means you don't have to wait for a page reload when you click to view a message.
-* Even if you create a new message, there is no page refresh--just a couple of AJAX calls happening in the background, posting JSON data to the server.
-* Keeps track of what you've read--even if you do reload the page. It's storing all the ids that you've read in a cookie as a serialized array.
+* Even if you create a new message, there is no page refresh--just a couple of Backbone.js AJAX calls happening in the background, posting JSON data to the server.
+* Keeps track of what you've read--even if you do reload the page. It's storing all the ids that you've read in a cookie as a serialized array. See app/controllers/rumors_controller.rb for the details.
 
 Where Might I Use This?
 -----------------------
@@ -59,7 +59,7 @@ Then she gets distracted by a stapler salesman, and leaves her cubicle.
 
 ### Bill
 
-Bill uses CTRL-T in firofox on his Ubuntu laptop and types in 'grapevine.company.com'. Th sees theree new entries. The fourth entry is highlighted, but he's already read it. He smartly hits the up-arrow key, and the next up the list highlights and displays its contents. 
+Bill uses CTRL-T in firefox on his Ubuntu laptop and types in 'grapevine.company.com'. Th sees theree new entries. The fourth entry is highlighted, but he's already read it. He smartly hits the up-arrow key, and the next up the list highlights and displays its contents. 
 
 Five seconds later, he keys through the rest, settling finally on hte first one. He reads it carefully, then CTRL-W closes the tab.
 

@@ -6,6 +6,8 @@
 
 body{
   background-color: $nearly_black_background;
+  position: relative;
+  z-index: -2;
 }
 #content{
   width: 600px;
@@ -46,7 +48,24 @@ body{
     color: purple;
     font-style: italic;
   }
-
 }
 
+#footer{
+  z-index: -1;
+  padding: 24px 0 18px;
+  background-color: $footer_black;
+  border: 1px solid $light_text;
+  margin: 0 auto 20px;
+  position: relative;
+  top: -10px;
+  width: 598px;
+  p, a{
+    font-size: 12px;
+    padding-top: 2px;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    color: $light_text;
+    }
+}
 

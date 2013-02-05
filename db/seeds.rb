@@ -26,13 +26,13 @@ Rumor.create(author: author,
   body: "Check out the source code at github.com/jackdesert/grapevine.")
 
 Rumor.create(author: author,
-  headline: "User Story I",
-  body: "Louisa uses her mouse to select a separate Internet Explorer window. She notices that three new items have shown up. Sheclicks the third one down and it immediately glows, indicating that she has selected it. Meanwhile, the contents of the message show up in the right pane. She reads it and laughs--it's from her baby brother who just started working here two weeks ago. \n\nShe clicks on the next one  up, and it highlights in turn, with its content now appearing in the right pane. She notices a typo and just can't help herself so she clicks \"edit\", adds the missing character, clicks \"save\" and smiles with glee to see the revised content appear. \n\nThen she gets distracted by a stapler salesman, and leaves her cubicle.")
+  headline: "User Story II",
+  body: "Bill uses CTRL-T in Firefox on his Ubuntu laptop and types in 'grapevine.company.com'. Th sees theree new entries. The fourth entry is highlighted, but he's already read it. He smartly hits the up-arrow key, and the next up the list highlights and displays its contents. \n\nFive seconds later, he keys through the rest, settling finally on hte first one. He reads it carefully, then CTRL-W closes the tab.")
 
 
 Rumor.create(author: author,
-  headline: "User Story II",
-  body: "Bill uses CTRL-T in firofox on his Ubuntu laptop and types in 'grapevine.company.com'. Th sees theree new entries. The fourth entry is highlighted, but he's already read it. He smartly hits the up-arrow key, and the next up the list highlights and displays its contents. \n\nFive seconds later, he keys through the rest, settling finally on hte first one. He reads it carefully, then CTRL-W closes the tab.")
+  headline: "User Story",
+  body: "Louisa uses her mouse to select a separate Internet Explorer window. She notices that three new items have shown up. Sheclicks the third one down and it immediately glows, indicating that she has selected it. Meanwhile, the contents of the message show up in the right pane. She reads it and laughs--it's from her baby brother who just started working here two weeks ago. \n\nShe clicks on the next one  up, and it highlights in turn, with its content now appearing in the right pane. She notices a typo and just can't help herself so she clicks \"edit\", adds the missing character, clicks \"save\" and smiles with glee to see the revised content appear. \n\nThen she gets distracted by a stapler salesman, and leaves her cubicle.")
 
 
 Rumor.create(author: author,
@@ -58,7 +58,7 @@ Rumor.create(author: author,
 
 Rumor.create(author: author,
   headline: "Cool Features IV",
-  body: "Even if you create a new message, there is no page refresh--just a couple of AJAX calls happening in the background, posting JSON data to the server.")
+  body: "Even if you create a new message, there is no page refresh--just a couple of Backbone.js AJAX calls happening in the background, posting JSON data to the server.")
 
 Rumor.create(author: author,
   headline: "Cool Features III",
