@@ -78,7 +78,7 @@ Rumor.create(author: author,
  
 Rumor.create(author: author,
   headline: "Why a Grapevine?",
-  body: "I was tasked with building a simple messaging system, and user authentication was not part of the requirements. To make it as real as possible, I had to find a use case where people would actually use a system that didn't require people to log in. You know--kind of like a corkboard in your living room. A grapevine always has useful tidbits of information, none of which are private, and none of which are safe from others' muddling. Therefore, I call messaging with no authentication 'A Grapevine'.")
+  body: "I was tasked with building a simple messaging system, and user authentication was not part of the requirements. To make it as real as possible, I had to find a use case where people would actually use a system that didn't require people to log in. You know--kind of like a corkboard in your living room.\n\nA grapevine always has useful tidbits of information, none of which are private, and none of which are safe from others' muddling. Therefore, I call messaging with no authentication 'A Grapevine'.")
 
 Rumor.create(author: author,
   headline: "This is a Grapevine",
