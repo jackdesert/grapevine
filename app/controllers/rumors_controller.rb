@@ -4,7 +4,7 @@ class RumorsController < ApplicationController
 
   respond_to :json
 
-  before_filter :initialize_cookie
+  before_filter :initialize_cookie, :seed_if_needed
 
   def index
     ids = get_read_ids_as_array_of_strings
@@ -17,7 +17,9 @@ class RumorsController < ApplicationController
   end
 
   def create
-    respond_with Rumor.create(params[:rumor])
+    rumor = Rumor.create(params[:rumor])
+    save_in_cookie_as_read(rumor)
+    respond_with rumor 
   end
 
   def update
@@ -34,6 +36,10 @@ class RumorsController < ApplicationController
   end
 
   protected
+
+  def seed_if_needed
+    Farmer.seed_if_needed
+  end
 
   def initialize_cookie
     cookies[COOKIE_NAME] ||= ''

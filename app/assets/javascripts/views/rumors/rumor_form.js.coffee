@@ -15,8 +15,8 @@ class Grapevine.Views.RumorForm extends Backbone.View
   createRumor: (event) ->
     event.preventDefault()
     attributes = @getFormAttributes()
-    @collection.create attributes
-    @displayNewlyCreatedRumor(@collection.last())
+    # Create a new rumor at the beginning of the collection
+    @collection.create attributes, {wait: true, at: 0}
 
   updateRumor: (event) ->
     event.preventDefault()
@@ -30,7 +30,6 @@ class Grapevine.Views.RumorForm extends Backbone.View
 
   cancelForm: (event) ->
     event.preventDefault()
-    window.vv = @
     rumor = @.options.rumor
     if rumor
       @displayNewlyCreatedRumor(rumor)

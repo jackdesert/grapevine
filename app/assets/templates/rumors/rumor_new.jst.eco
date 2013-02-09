@@ -3,7 +3,7 @@
 <% submit_id    = if @new_item then "new_rumor_submit"     else "rumor_update" %>
 <% headline     = if @rumor    then @rumor.get('headline') else '' %>
 <% body         = if @rumor    then @rumor.get('body')     else '' %>
-<% author       = if @rumor    then @rumor.get('headline') else '' %>
+<% author       = if @rumor    then @rumor.get('author') else '' %>
 <form id="<%= form_id %>">
   <input type='text' id='new_rumor_headline' value='<%= headline %>'>
   <label for='new_rumor_headline'>Title</label>

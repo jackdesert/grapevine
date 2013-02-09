@@ -5,11 +5,12 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
   tagName: 'None'
 
   events:
-    "click li"                : "displayRumor"
+    "click li"                : "displayRumorFromEvent"
     "click #new_rumor_button" : "buildRumor"
 
   initialize: ->
     @collection.on('reset', @render, this)
+    @collection.on('error', @resetAfterSeed, this)
     @collection.on('add', @prependRumorAndMarkAsCurrent, this)
 
   render: ->
@@ -19,19 +20,35 @@ class Grapevine.Views.RumorsIndex extends Backbone.View
     @setHeightOfIndex()
     this
 
-  displayRumor: (event) ->
-    # Similar to Grapevine.Views.RumorForm#displayNewlyCreatedRumor
+  resetAfterSeed: ->
+    # Call this if an update to the server fails
+    # (We are expecting an update to fail if someone leaves Grapevine open in their 
+    # browser overnight (meanwhile database is re-seeded) then tries to edit a rumor
+    # that isn't in the database anymore (server will return a 404 error
+    xhr = arguments[1]
+    if xhr.status == 404
+      @collection.fetch()
+      $('#rumor_details').html('<--Click left')
+      alert 'Now refreshing to grab new content. (Re-seeded every midnight)'
+
+  displayRumorFromEvent: (event) ->
     id = event.currentTarget.id
     rumor = @collection.get(id)
     rumor.ensureMarkedAsRead()
+    @displayRumor(rumor)
+
+
+  displayRumor: (rumor) ->
+    # Similar to Grapevine.Views.RumorForm#displayNewlyCreatedRumor
     view = new Grapevine.Views.Rumor(model: rumor)
     $('#rumor_details').html(view.render().el)
-
+      
   appendRumor: (rumor) ->
     view = new Grapevine.Views.RumorHeadline(model: rumor)
     $('#rumors').append(view.render().el)
 
   prependRumorAndMarkAsCurrent: (rumor) ->
+    @displayRumor(@collection.first())
     view = new Grapevine.Views.RumorHeadline(model: rumor)
     $('#rumors').prepend(view.render().el)
     rumor.markAsCurrent()
